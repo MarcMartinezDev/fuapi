@@ -1,16 +1,16 @@
-import React from "react";
 import NavSection from "./NavSection";
+import React from "react";
 
 const Navbar = () => {
   return (
-    <nav className="flex justify-center mt-10 gap-10 lg:flex-col lg:mt-0">
+    <nav className="flex gap-5 flex-col mt-0">
       <div>
-        <h3 className="mb-4 text-xl text-[#AB65B7]">About</h3>
+        <h3>About</h3>
         <a href="#overview">Overview</a>
       </div>
       <div className="flex flex-col">
-        <h3 className="text-xl text-[#AB65B7] mb-4">API Reference</h3>
-        <div className="flex gap-4 lg:block">
+        <h3>API Reference</h3>
+        <div>
           <NavSection section="Users">
             <a href="#get-users">GET all</a>
             <a href="#user-id">GET by id</a>

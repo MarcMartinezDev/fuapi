@@ -18,7 +18,11 @@ const Menu = () => {
           </Link>
         </li>
         <li>
-          <Link to="https://www.github.com" target="_blank">
+          <Link
+            to="https://github.com/MarcMartinezDev/fuapi"
+            target="_blank"
+            referrerPolicy="no-referrer"
+          >
             GitHub
           </Link>
         </li>

@@ -1,10 +1,10 @@
-import React from "react";
 import { Link } from "react-router-dom";
+import React from "react";
 
 const LinkButton = ({ route }) => {
   return (
     <Link
-      className="link-button w-full"
+      className="btn w-full"
       to={route === "docs" ? "/docs" : "https://github.com"}
       target={route === "docs" ? "" : "_blank"}
       referrerPolicy="no-referrer"

@@ -1,9 +1,9 @@
 import { getPeopleById } from "../api/api.requests";
 import CodeExample from "../components/home/CodeExample";
+import CountResources from "../components/home/CountResources";
+import LinkButton from "../components/home/LinkButton";
 import React, { useState } from "react";
 import Routes from "../components/home/Routes";
-import LinkButton from "../components/home/LinkButton";
-import CountResources from "../components/home/CountResources";
 
 const Home = () => {
   const [codeExample, setCodeExample] = useState(false);
@@ -42,7 +42,7 @@ const Home = () => {
         <small className="block">code example</small>
         <code>
           <p className="text-wrap">
-            fetch("http://localhost:3000/api/user/1")
+            fetch("{window.location.origin}/api/user/1")
             <span className="ml-4 block">
               .then(response =&gt; response.json())
             </span>
@@ -52,7 +52,7 @@ const Home = () => {
           </p>
         </code>
         <button
-          className="link-button w-fit p-2 my-2"
+          className="btn w-fit p-2 my-2"
           onClick={async () => {
             if (request === null) {
               const req = await getPeopleById(1);
@@ -75,11 +75,17 @@ const Home = () => {
           <h2 className="text-2xl">Resources</h2>
           <p className="mb-10">Currently the API has the following resources</p>
           <div className="flex flex-col gap-10">
-            <CountResources countOf="users" />
-            <CountResources countOf="posts" />
+            <CountResources countOf="users" count="10" />
+            <CountResources countOf="posts" count="10" />
           </div>
         </div>
-        <img src="/database.png" alt="" width={250} height={250} />
+        <img
+          src="/database.png"
+          alt="database resources of FuAPI"
+          width={250}
+          height={250}
+          className="lg:min-w-[300px]"
+        />
       </div>
       <div>
         <h2 className="text-2xl">Routes</h2>
@@ -92,7 +98,7 @@ const Home = () => {
           <Routes method="POST" route="/v1/create-user" />
           <Routes method="PUT" route="/v1/update-user/{id}" />
           <Routes method="DELETE" route="/v1/delete-user/{id}" />
-          <a href="/docs" className="link-button w-fit p-2 my-4">
+          <a href="/docs" className="btn w-fit p-2 my-4">
             See in docs
           </a>
         </div>

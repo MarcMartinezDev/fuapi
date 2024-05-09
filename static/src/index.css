@@ -10,6 +10,10 @@ header {
   @apply px-4 bg-[#f2f2f2] bg-opacity-95 py-5 sticky top-0 z-10 md:px-10;
 }
 
+h3 {
+  @apply text-xl text-[#AB65B7] mb-4;
+}
+
 code {
   @apply flex flex-col bg-[#AB65B7] bg-opacity-5 px-2 pt-10 rounded-md text-wrap text-base font-sans tracking-wider overflow-x-scroll md:py-4;
 }
@@ -18,10 +22,12 @@ code {
   @apply text-[#AB65B7] transition-all;
 }
 
-nav::-webkit-scrollbar, code::-webkit-scrollbar, .navbar::-webkit-scrollbar{
+nav::-webkit-scrollbar,
+code::-webkit-scrollbar,
+.navbar::-webkit-scrollbar {
   visibility: hidden;
 }
 
-.link-button {
+.btn {
   @apply flex p-4 gap-4 justify-center items-center rounded-md text-white bg-[#262A3C] hover:bg-[#AB65B7] transition-all;
 }

@@ -10,7 +10,7 @@ const Header = () => {
           <Link to="/">
             <img
               src="/logo.png"
-              alt="Logo of fake user api"
+              alt="Logo of FuAPI"
               width={40}
               className="min-w-[40px]"
             />

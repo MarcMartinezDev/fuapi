@@ -1,14 +1,14 @@
 import Navbar from "../components/documentation/Navbar";
-import Section from "../components/documentation/Section";
 import React from "react";
+import Section from "../components/documentation/Section";
 
 const Documentation = () => {
   return (
-    <div className="lg:flex">
-      <div className="hidden navbar fixed top-14 overflow-y-scroll pb-20 h-screen shadow-md px-6 bg-[#f2f2f2] z-20 lg:sticky lg:block lg:min-w-[250px]">
+    <div className="flex xl:gap-20">
+      <div className="hidden navbar fixed top-20 overflow-y-scroll pb-20 h-screen shadow-md px-6 bg-[#f2f2f2] lg:sticky lg:block lg:min-w-[300px]">
         <Navbar />
       </div>
-      <div className="flex flex-col gap-32 pb-20 mx-8 lg:w-2/3 lg:m-auto">
+      <div className="flex flex-col gap-32 pb-20 mx-8 lg:w-2/3 xl:w-1/2">
         <h2 className="text-3xl">Overview</h2>
         <article id="overview" className="flex flex-col gap-4">
           <span className="p-2 rounded-md bg-[#AB65B7] bg-opacity-20 w-fit mb-10">

@@ -1,11 +1,11 @@
 import "./index.css";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import ContextProvaider from "./context/ContextProvaider";
+import Documentation from "./pages/Documentation";
+import Home from "./pages/Home";
+import Layout from "./pages/layouts/Layout";
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Layout from "./pages/layouts/Layout";
-import Home from "./pages/Home";
-import Documentation from "./pages/Documentation";
-import ContextProvaider from "./context/ContextProvaider";
 
 const router = createBrowserRouter([
   {
@@ -19,6 +19,10 @@ const router = createBrowserRouter([
       {
         path: "/docs",
         element: <Documentation />,
+      },
+      {
+        path: "/*",
+        element: <Home />,
       },
     ],
   },

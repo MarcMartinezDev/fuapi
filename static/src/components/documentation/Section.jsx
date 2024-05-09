@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
-import Information from "./Information";
 import ClipboardJS from "clipboard";
+import Information from "./Information";
+import React, { useEffect, useState } from "react";
 
 const Section = ({ id, title, description, fetch, method, additional }) => {
   new ClipboardJS(".clipboard");
@@ -14,13 +14,15 @@ const Section = ({ id, title, description, fetch, method, additional }) => {
 
   return (
     <article className="flex flex-col" id={id}>
-      <h3 className="text-[#AB65B7] font-semibold">{title}</h3>
-      <p className="text-lg mb-5">{description}</p>
+      <h3>{title}</h3>
+      <p className="mb-5">{description}</p>
       <pre className="relative">
         <code id={`clip-${id}`}>
           {method === "GET" ? (
             <>
-              <span>fetch("http://localhost:3000/api/v1/{fetch}")</span>
+              <span>
+                fetch("{window.location.origin}/api/v1/{fetch}")
+              </span>
               <span className="ml-5">
                 .then(response =&gt; response.json())
               </span>
@@ -30,7 +32,9 @@ const Section = ({ id, title, description, fetch, method, additional }) => {
             </>
           ) : method === "DELETE" ? (
             <>
-              <span>fetch("http://localhost:3000/api/v1/{fetch}", &#123;</span>
+              <span>
+                fetch("{window.location.origin}/api/v1/{fetch}", &#123;
+              </span>
               <span className="ml-5">method: "DELETE",</span>
               <span className="ml-5">
                 headers: &#123; <br /> "Content-Type":"application/json" <br />
@@ -46,7 +50,9 @@ const Section = ({ id, title, description, fetch, method, additional }) => {
             </>
           ) : (
             <>
-              <span>fetch("http://localhost:3000/api/v1/{fetch}", &#123;</span>
+              <span>
+                fetch("{window.location.origin}/api/v1/{fetch}", &#123;
+              </span>
               <span className="ml-5">method: "{method}",</span>
               <span className="ml-5">
                 headers: &#123; <br /> "Content-Type":"application/json" <br />
