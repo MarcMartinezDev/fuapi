@@ -1,0 +1,7 @@
+node_modules
+.env
+.eslintrc.cjs
+package-lock.json
+dist
+json_data
+tasks.txt

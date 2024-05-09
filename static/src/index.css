@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  @apply font-sans text-gray-800 bg-[#f2f2f2] text-lg xl:text-xl;
+}
+
+header {
+  @apply px-4 bg-[#f2f2f2] bg-opacity-95 py-5 sticky top-0 z-10 md:px-10;
+}
+
+code {
+  @apply flex flex-col bg-[#AB65B7] bg-opacity-5 px-2 pt-10 rounded-md text-wrap text-base font-sans tracking-wider overflow-x-scroll md:py-4;
+}
+
+.menu-active {
+  @apply text-[#AB65B7] transition-all;
+}
+
+nav::-webkit-scrollbar, code::-webkit-scrollbar, .navbar::-webkit-scrollbar{
+  visibility: hidden;
+}
+
+.link-button {
+  @apply flex p-4 gap-4 justify-center items-center rounded-md text-white bg-[#262A3C] hover:bg-[#AB65B7] transition-all;
+}
