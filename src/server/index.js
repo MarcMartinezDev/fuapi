@@ -1,5 +1,5 @@
-import app from "./server/app.js";
-import { connect } from "./server/database.js";
+import app from "./app.js";
+import { connect } from "./database.js";
 import "dotenv/config.js";
 
 connect();

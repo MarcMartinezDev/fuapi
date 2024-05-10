@@ -11,7 +11,7 @@ const __filename = fileURLToPath(import.meta.url);
 export const __dirname = path.resolve(path.dirname(__filename), "../");
 
 app.use(express.json());
-app.use(express.static(__dirname + "/static/dist"));
+app.use(express.static(path.join(__dirname, "client/dist")));
 app.use(cors());
 
 /** use routers */
@@ -19,7 +19,7 @@ app.use("/api", [userRouter, postRouter]);
 
 /** static routes */
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "static/dist", "/index.html"));
+  res.sendFile(path.join(__dirname, "client/dist", "/index.html"));
 });
 
 export default app;

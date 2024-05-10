@@ -5,3 +5,6 @@ package-lock.json
 dist
 json_data
 tasks.txt
+.vercel
+.turbo
+vercel.json
