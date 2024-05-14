@@ -22,7 +22,7 @@ const Home = () => {
             </div>
           </div>
           <img
-            src="/main.png"
+            src="/main.webp"
             alt="image of FuAPI page"
             width={300}
             className="lg:w-[300px]"
@@ -70,7 +70,7 @@ const Home = () => {
           </>
         )}
       </div>
-      <div className="flex flex-col gap-10 items-center lg:flex-row">
+      <div className="flex flex-col gap-20 items-center lg:flex-row">
         <div className="w-full">
           <h2 className="text-2xl">Resources</h2>
           <p className="mb-10">Currently the API has the following resources</p>
@@ -80,11 +80,10 @@ const Home = () => {
           </div>
         </div>
         <img
-          src="/database.png"
+          src="/database.webp"
           alt="database resources of FuAPI"
           width={250}
           height={250}
-          className="lg:min-w-[300px]"
         />
       </div>
       <div>
