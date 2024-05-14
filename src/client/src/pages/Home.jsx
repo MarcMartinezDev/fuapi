@@ -12,9 +12,9 @@ const Home = () => {
   return (
     <div className="flex flex-col gap-40 mb-20 px-4 md:w-2/3 xl:w-1/2 m-auto">
       <div className="w-full flex flex-col mt-20">
-        <div className="flex flex-col gap-5 items-center justify-between mb-20 lg:flex-row">
+        <div className="flex flex-col gap-20 items-center justify-between mb-20 lg:flex-row">
           <div className="w-full">
-            <h1 className="font-semibold text-3xl">Fake user API</h1>
+            <h1 className="font-semibold text-3xl">FuAPI</h1>
             <p className="text-lg">Get some fake data for your site.</p>
             <div className="flex flex-col gap-10 my-10 md:flex-row md:gap-2">
               <LinkButton route="docs" />
@@ -29,16 +29,16 @@ const Home = () => {
           />
         </div>
         <div>
-          <h2 className="text-2xl">What is Fake user API?</h2>
+          <h2 className="text-2xl">What is FuAPI?</h2>
           <p>
-            Fake user API is a REST API project that provides fake data about
+            Fake User API is a REST API project that provides fake data about
             users so you can use it in your website or project for free.
           </p>
         </div>
       </div>
       <div>
         <h2 className="text-2xl">How to start ?</h2>
-        <p className="mb-10">Try making a GET request to an API resource.</p>
+        <p className="mb-10">To start making a GET request to an API resource, you can use the fetch API or libraries like axios to handle HTTP requests.</p>
         <small className="block">code example</small>
         <code>
           <p className="text-wrap">
@@ -88,7 +88,7 @@ const Home = () => {
       </div>
       <div>
         <h2 className="text-2xl">Routes</h2>
-        <p className="mb-10">All HTTP methods are supported!</p>
+        <p className="mb-10">FuAPI supports the next HTTP methods</p>
         <div className="flex flex-col gap-3">
           <Routes method="GET" route="/v1/users" />
           <Routes method="GET" route="/v1/users/{id}" />
