@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  @apply font-sans text-gray-800 bg-[#f2f2f2] text-lg xl:text-xl;
+  @apply font-sans text-gray-800 bg-[#f2f2f2] text-lg lg:text-base;
 }
 
 header {

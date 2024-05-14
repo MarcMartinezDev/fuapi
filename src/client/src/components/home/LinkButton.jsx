@@ -9,7 +9,7 @@ const LinkButton = ({ route }) => {
       target={route === "docs" ? "" : "_blank"}
       referrerPolicy="no-referrer"
     >
-      <p>{route}</p>
+      <p>{route.toUpperCase()}</p>
       {route === "docs" ? (
         <svg
           width="40"
