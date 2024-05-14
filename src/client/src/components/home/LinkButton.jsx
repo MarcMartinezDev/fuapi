@@ -5,7 +5,9 @@ const LinkButton = ({ route }) => {
   return (
     <Link
       className="btn w-full"
-      to={route === "docs" ? "/docs" : "https://github.com"}
+      to={
+        route === "docs" ? "/docs" : "https://github.com/MarcMartinezDev/fuapi"
+      }
       target={route === "docs" ? "" : "_blank"}
       referrerPolicy="no-referrer"
     >

@@ -4,6 +4,7 @@ import CountResources from "../components/home/CountResources";
 import LinkButton from "../components/home/LinkButton";
 import React, { useState } from "react";
 import Routes from "../components/home/Routes";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const [codeExample, setCodeExample] = useState(false);
@@ -38,7 +39,10 @@ const Home = () => {
       </div>
       <div>
         <h2 className="text-2xl">How to start ?</h2>
-        <p className="mb-10">To start making a GET request to an API resource, you can use the fetch API or libraries like axios to handle HTTP requests.</p>
+        <p className="mb-10">
+          To start making a GET request to an API resource, you can use the
+          fetch API or libraries like axios to handle HTTP requests.
+        </p>
         <small className="block">code example</small>
         <code>
           <p className="text-wrap">
@@ -97,9 +101,9 @@ const Home = () => {
           <Routes method="POST" route="/v1/create-user" />
           <Routes method="PUT" route="/v1/update-user/{id}" />
           <Routes method="DELETE" route="/v1/delete-user/{id}" />
-          <a href="/docs" className="btn w-fit p-2 my-4">
+          <Link to="/docs" className="btn w-fit p-2 my-4">
             See in docs
-          </a>
+          </Link>
         </div>
       </div>
     </div>
