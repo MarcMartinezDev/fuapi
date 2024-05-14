@@ -15,7 +15,7 @@ h3 {
 }
 
 code {
-  @apply flex flex-col bg-[#AB65B7] bg-opacity-5 px-2 pt-10 rounded-md text-wrap text-base font-sans tracking-wider overflow-x-scroll md:py-4;
+  @apply flex flex-col bg-[#AB65B7] bg-opacity-10 px-2 pt-10 rounded-md text-wrap text-base font-sans tracking-wider overflow-x-scroll md:py-4;
 }
 
 .menu-active {
