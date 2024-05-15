@@ -10,15 +10,13 @@ class PostController {
       if (user) {
         const posts = await Post.find({ userId: user })
           .limit(limit)
-          .select("-_id -createdAt -updatedAt");
+          .select("-_id");
 
         if (posts.length < 1)
           return res.status(404).json({ message: "Posts not found" });
         else return res.status(200).json(posts);
       }
-      const posts = await Post.find({})
-        .limit(limit)
-        .select("-_id -createdAt -updatedAt");
+      const posts = await Post.find({}).limit(limit).select("-_id");
 
       if (posts === null)
         return res.status(404).json({ message: "Posts not found" });
@@ -32,9 +30,7 @@ class PostController {
     const { id } = req.params;
 
     try {
-      const post = await Post.findOne({ id }).select(
-        "-_id -createdAt -updatedAt"
-      );
+      const post = await Post.findOne({ id }).select("-_id");
       if (post === null)
         return res.status(404).json({ message: "Post not found" });
 

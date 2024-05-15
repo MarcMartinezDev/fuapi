@@ -15,14 +15,6 @@ const postSchema = mongoose.Schema({
     type: String,
     required: true,
   },
-  createdAt: {
-    type: Date,
-    default: Date.now,
-  },
-  updatedAt: {
-    type: Date,
-    default: Date.now,
-  },
   userId: {
     type: mongoose.Schema.Types.Number,
     ref: User,

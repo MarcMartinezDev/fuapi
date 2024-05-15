@@ -9,15 +9,13 @@ class UserController {
     try {
       if (country) {
         const users = await User.find({ "direction.country": country })
-          .select("-_id -createdAt -updatedAt")
+          .select("-_id")
           .limit(limit);
         if (users.length < 1)
           return res.status(404).json({ message: "No data found" });
         else res.json(users);
       } else {
-        const users = await User.find()
-          .select("-_id -createdAt -updatedAt -__v")
-          .limit(limit);
+        const users = await User.find().select("-_id").limit(limit);
         if (users.length < 1)
           return res.status(404).json({ message: "No data found" });
         res.json(users);
@@ -30,9 +28,7 @@ class UserController {
     const { id } = req.params;
 
     try {
-      const user = await User.findOne({ id })
-        .select("-_id -createdAt -updatedAt -__v")
-        .sort("desc");
+      const user = await User.findOne({ id }).select("-_id").sort("desc");
       if (user === null)
         return res.status(404).json({ message: "User not found" });
       else res.status(200).json(user);
@@ -105,9 +101,7 @@ class UserController {
     const { id } = req.params;
 
     try {
-      const user = await User.findOne({ id }).select(
-        "-__v -updatedAt -createdAt -admin -_id"
-      );
+      const user = await User.findOne({ id }).select("-_id");
       if (user === null)
         return res.status(404).json({ message: "User not found" });
       res.status(200).json({ message: "User deleted", id: user.id });

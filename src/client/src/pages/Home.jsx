@@ -79,7 +79,7 @@ const Home = () => {
           <h2 className="text-2xl">Resources</h2>
           <p className="mb-10">Currently the API has the following resources</p>
           <div className="flex flex-col gap-10">
-            <CountResources countOf="users" count="10" />
+            <CountResources countOf="users" count="20" />
             <CountResources countOf="posts" count="10" />
           </div>
         </div>
