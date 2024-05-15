@@ -1,15 +1,13 @@
 {
-  "name": "server",
+  "name": "fuapi-server",
   "version": "1.0.0",
-  "description": "",
+  "author": "marcmartinezdev",
   "main": "app.js",
   "type": "module",
   "scripts": {
     "dev": "node --watch index.js",
     "start": "node index.js"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "express": "^4.19.2",
     "mongoose": "^8.3.1"

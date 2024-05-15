@@ -1,8 +1,8 @@
 {
-  "name": "fak-user-api",
+  "name": "fuapi",
   "license": "MIT",
-  "private": true,
   "version": "1.0.0",
+  "author": "marcmartinezdev",
   "type": "module",
   "main": "index.js",
   "scripts": {
