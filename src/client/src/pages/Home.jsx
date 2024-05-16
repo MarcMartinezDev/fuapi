@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 
 const Home = () => {
   const [codeExample, setCodeExample] = useState(false);
-  const [request, setRequest] = useState(null); // code example request
+  const [request, setRequest] = useState(null);
 
   return (
     <div className="flex flex-col gap-40 mb-20 px-4 md:w-2/3 xl:w-1/2 m-auto">
