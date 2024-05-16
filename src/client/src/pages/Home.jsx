@@ -5,6 +5,7 @@ import LinkButton from "../components/home/LinkButton";
 import React, { useState } from "react";
 import Routes from "../components/home/Routes";
 import { Link } from "react-router-dom";
+import Code from "../components/Code";
 
 const Home = () => {
   const [codeExample, setCodeExample] = useState(false);
@@ -44,17 +45,7 @@ const Home = () => {
           fetch API or libraries like axios to handle HTTP requests.
         </p>
         <small className="block">code example</small>
-        <code>
-          <p className="text-wrap">
-            fetch("{window.location.origin}/api/user/1")
-            <span className="ml-4 block">
-              .then(response =&gt; response.json())
-            </span>
-            <span className="ml-4 block">
-              .then(data =&gt; console.log(data));
-            </span>
-          </p>
-        </code>
+        <Code method="GET" resource="users/1" />
         <button
           className="btn w-fit p-2 my-2"
           onClick={async () => {

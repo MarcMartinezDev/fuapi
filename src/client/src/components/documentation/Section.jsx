@@ -1,6 +1,7 @@
 import ClipboardJS from "clipboard";
 import Information from "./Information";
 import React, { useEffect, useState } from "react";
+import Code from "../Code";
 
 const Section = ({ id, title, description, fetch, method, additional }) => {
   new ClipboardJS(".clipboard");
@@ -17,58 +18,7 @@ const Section = ({ id, title, description, fetch, method, additional }) => {
       <h3>{title}</h3>
       <p className="mb-5">{description}</p>
       <pre className="relative">
-        <code id={`clip-${id}`}>
-          {method === "GET" ? (
-            <>
-              <span>
-                fetch("{window.location.origin}/api/v1/{fetch}")
-              </span>
-              <span className="ml-5">
-                .then(response =&gt; response.json())
-              </span>
-              <span className="ml-5">
-                .then(response =&gt; console.log(response));
-              </span>
-            </>
-          ) : method === "DELETE" ? (
-            <>
-              <span>
-                fetch("{window.location.origin}/api/v1/{fetch}", &#123;
-              </span>
-              <span className="ml-5">method: "DELETE",</span>
-              <span className="ml-5">
-                headers: &#123; <br /> "Content-Type":"application/json" <br />
-                <span>&#125;,</span>
-              </span>
-              <span>&#125;)</span>
-              <span className="ml-5">
-                .then(response =&gt; response.json())
-              </span>
-              <span className="ml-5">
-                .then(response =&gt; console.log(response));
-              </span>
-            </>
-          ) : (
-            <>
-              <span>
-                fetch("{window.location.origin}/api/v1/{fetch}", &#123;
-              </span>
-              <span className="ml-5">method: "{method}",</span>
-              <span className="ml-5">
-                headers: &#123; <br /> "Content-Type":"application/json" <br />
-                <span>&#125;,</span>
-              </span>
-              <span className="ml-5">body: JSON.stringify(your-data), </span>
-              <span>&#125;)</span>
-              <span className="ml-5">
-                .then(response =&gt; response.json())
-              </span>
-              <span className="ml-5">
-                .then(response =&gt; console.log(response));
-              </span>
-            </>
-          )}
-        </code>
+        <Code method={method} resource={fetch} id={id} />
         <button
           className="clipboard absolute top-0 right-0 pr-4 pt-2"
           data-clipboard-target={`#clip-${id}`}
