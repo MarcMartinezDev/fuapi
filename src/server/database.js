@@ -7,7 +7,7 @@ export const connect = async () => {
       dbName: process.env.DB_NAME,
     });
     await mongoose.connection.db.admin().command({ ping: 1 });
-    console.log("You successfully connected to MongoDB!");
+    console.log("You successfully connected to database");
   } catch (err) {
     console.log(err);
   }
