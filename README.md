@@ -1,7 +1,7 @@
 
 # FuAPI
 
-[FuAPI](https://fuapp.vercel.app) is a simple REST API that provides fake users data for your projects or testing.
+[FuAPI](https://fu-api.vercel.app) is a simple REST API that provides fake users data for your projects or testing.
 
 It is intended to be a community maintained application.
 ## Why?
@@ -13,11 +13,11 @@ I also want to improve this project over time. Of course I appreciate all feedba
 
 Actually FuAPI has 2 main resources:
 
-- Users https://fuapp.vercel.app/api/v1/users
-- Posts https://fuapp.vercel.app/api/v1/posts
+- Users https://fu-api.vercel.app/api/v1/users
+- Posts https://fu-api.vercel.app/api/v1/posts
 ## Documentation
 
-You find all the documentation here -> [FuAPI Docs](https://fuapp.vercel.app/docs)
+You find all the documentation here -> [FuAPI Docs](https://fu-api.vercel.app/docs)
 
 
 ## Tech Stack
