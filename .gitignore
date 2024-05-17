@@ -8,3 +8,5 @@ tasks.txt
 .vercel
 .turbo
 vercel.json
+.vscode
+turbo.json
