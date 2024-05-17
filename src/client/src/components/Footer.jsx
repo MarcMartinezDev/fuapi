@@ -10,6 +10,7 @@ const Footer = () => {
           to="https://github.com/MarcMartinezDev"
           target="_blank"
           referrerPolicy="no-referrer"
+          aria-label="Link to main github page of marc martinez dev"
         >
           <svg
             width="30"
@@ -27,6 +28,7 @@ const Footer = () => {
           to="https://linkedin.com/in/marc-martinez-her/"
           target="_blank"
           referrerPolicy="no-referrer"
+          aria-label="Link to main linkedin page of marc martinez dev"
         >
           <svg
             width="30"

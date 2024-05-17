@@ -11,15 +11,15 @@ header {
 }
 
 h3 {
-  @apply text-xl text-[#AB65B7] mb-4;
+  @apply text-xl text-[#953ba5] mb-4;
 }
 
 code {
-  @apply flex flex-col bg-[#AB65B7] bg-opacity-10 px-2 pt-10 rounded-md text-wrap text-base font-sans tracking-wider overflow-x-scroll md:py-4;
+  @apply flex flex-col bg-[#953ba5] bg-opacity-10 px-2 pt-10 rounded-md text-wrap text-base font-sans tracking-wider overflow-x-scroll md:py-4;
 }
 
 .menu-active {
-  @apply text-[#AB65B7] transition-all;
+  @apply text-[#953ba5] transition-all;
 }
 
 nav::-webkit-scrollbar,
@@ -29,5 +29,5 @@ code::-webkit-scrollbar,
 }
 
 .btn {
-  @apply flex p-4 gap-4 justify-center items-center rounded-md text-white bg-[#262A3C] hover:bg-[#AB65B7] transition-all;
+  @apply flex p-4 gap-4 justify-center items-center rounded-md text-white bg-[#262A3C] hover:bg-[#953ba5] transition-all;
 }

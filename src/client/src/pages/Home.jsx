@@ -27,7 +27,7 @@ const Home = () => {
             src="/main.webp"
             alt="image of FuAPI page"
             width={300}
-            className="lg:w-[300px]"
+            height={300}
           />
         </div>
         <div>

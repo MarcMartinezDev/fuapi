@@ -12,7 +12,7 @@ const Header = () => {
               src="/logo.png"
               alt="Logo of FuAPI"
               width={40}
-              className="min-w-[40px]"
+              height={40}
             />
           </Link>
           <h1 className="text-lg hidden md:block">FuAPI</h1>
