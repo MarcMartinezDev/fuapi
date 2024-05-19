@@ -1,9 +1,9 @@
 import ClipboardJS from "clipboard";
+import Code from "../Code";
 import Information from "./Information";
 import React, { useEffect, useState } from "react";
-import Code from "../Code";
 
-const Section = ({ id, title, description, fetch, method, additional }) => {
+const Article = ({ id, title, description, fetch, method, additional }) => {
   new ClipboardJS(".clipboard");
   const [isCopied, setIsCopied] = useState(false);
 
@@ -32,4 +32,4 @@ const Section = ({ id, title, description, fetch, method, additional }) => {
   );
 };
 
-export default Section;
+export default Article;
