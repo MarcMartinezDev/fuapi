@@ -20,7 +20,7 @@ const Section = ({ id, title, description, fetch, method, additional }) => {
       <pre className="relative">
         <Code method={method} resource={fetch} id={id} />
         <button
-          className="clipboard absolute top-0 right-0 pr-4 pt-2"
+          className="clipboard absolute top-1 right-1 p-[6px] bg-[#953ba5] text-[#f2f2f2] font-sans rounded-md text-sm"
           data-clipboard-target={`#clip-${id}`}
           onClick={() => (!isCopied ? setIsCopied(true) : setIsCopied(false))}
         >
