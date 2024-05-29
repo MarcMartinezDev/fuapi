@@ -14,10 +14,6 @@ h3 {
   @apply text-xl text-[#953ba5] mb-4;
 }
 
-pre {
-  @apply overflow-x-scroll;
-}
-
 code {
   @apply flex flex-col bg-[#953ba5] bg-opacity-10 px-2 pt-10 rounded-md text-wrap text-base font-sans tracking-widest overflow-x-scroll md:py-4;
 }
