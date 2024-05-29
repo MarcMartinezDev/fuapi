@@ -5,9 +5,9 @@ import React from "react";
 
 const Documentation = () => {
   return (
-    <div className="flex xl:gap-20">
+    <div className="flex mx-2 xl:gap-20">
       <Navbar />
-      <div className="flex flex-col gap-24 pb-20 m-auto lg:w-1/2">
+      <div className="flex flex-col gap-24 pb-20 m-auto lg:w-1/2 overflow-x-scroll">
         <h2 className="text-3xl">Overview</h2>
         <article id="overview" className="flex flex-col gap-4">
           <span className="p-2 rounded-md bg-[#AB65B7] bg-opacity-20 w-fit mb-10">
