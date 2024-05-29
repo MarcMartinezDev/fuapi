@@ -10,6 +10,7 @@ import Code from "../components/Code";
 const Home = () => {
   const [codeExample, setCodeExample] = useState(false);
   const [request, setRequest] = useState(null);
+  const [loading, setLoading] = useState(false);
 
   return (
     <div className="flex flex-col gap-40 mb-20 px-4 md:w-2/3 xl:w-1/2 m-auto">
@@ -50,13 +51,15 @@ const Home = () => {
           className="btn w-fit p-2 my-2"
           onClick={async () => {
             if (request === null) {
-              const req = await getPeopleById(1);
+              setLoading(true);
+              const req = await getPeopleById();
               setRequest(req);
               setCodeExample(true);
+              setLoading(false);
             }
           }}
         >
-          Try it
+          {loading ? "Loading..." : "Try it"}
         </button>
         {codeExample && (
           <>

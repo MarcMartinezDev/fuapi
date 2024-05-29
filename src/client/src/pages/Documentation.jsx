@@ -7,7 +7,7 @@ const Documentation = () => {
   return (
     <div className="flex xl:gap-20">
       <Navbar />
-      <div className="flex flex-col gap-44 pb-20 px-4 max-w-full m-auto lg:w-1/2">
+      <div className="flex flex-col gap-24 pb-20 m-auto lg:w-1/2">
         <h2 className="text-3xl">Overview</h2>
         <article id="overview" className="flex flex-col gap-4">
           <span className="p-2 rounded-md bg-[#AB65B7] bg-opacity-20 w-fit mb-10">
@@ -28,29 +28,33 @@ const Documentation = () => {
           </ul>
         </article>
         <h2 className="text-3xl">Users</h2>
-        {USER_ARTICLES.map(article => (
-          <Article
-            key={article.id}
-            id={article.id}
-            title={article.title}
-            description={article.description}
-            fetch={article.fecth}
-            method={article.method}
-            additional={article.additional}
-          />
-        ))}
+        <div className="flex flex-col gap-52">
+          {USER_ARTICLES.map(article => (
+            <Article
+              key={article.id}
+              id={article.id}
+              title={article.title}
+              description={article.description}
+              fetch={article.fecth}
+              method={article.method}
+              additional={article.additional}
+            />
+          ))}
+        </div>
         <h2 className="text-3xl">Posts</h2>
-        {POST_ARTICLES.map(article => (
-          <Article
-            key={article.id}
-            id={article.id}
-            title={article.title}
-            description={article.description}
-            fetch={article.fetch}
-            method={article.method}
-            additional={article.additional}
-          />
-        ))}
+        <div className="flex flex-col gap-52">
+          {POST_ARTICLES.map(article => (
+            <Article
+              key={article.id}
+              id={article.id}
+              title={article.title}
+              description={article.description}
+              fetch={article.fetch}
+              method={article.method}
+              additional={article.additional}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );
